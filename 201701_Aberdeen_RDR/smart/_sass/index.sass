@@ -1,0 +1,115 @@
+//上方nav 樣式
+@import "nav.sass"
+
+//PC版浮動的"立馬投資"
+@import "goBuy.sass"
+
+//rdr
+@import "videoPopup.sass"
+
+//footer
+@import "footer.sass"
+
+
+
+//首頁 投資大解密、基金知識通、大師解讀、秒懂RDR
+@import "indexMenu.sass"
+
+//首頁動畫
+@import "kvAnimation.sass"
+
+body
+	min-width: 1100px
+	&.pageload *
+		transition: none !important
+
+
+.oldIE
+	display: none
+
+
+//首頁主視覺
+.kv
+	position: relative
+	max-width: 980px
+	margin: 70px auto 60px
+	letter-spacing: -4px
+	white-space: -4px
+	font-size: 0
+.blockWrap
+	position: absolute
+	left: 0
+	right: 0
+	margin: auto
+	width: 536px
+	height: 536px
+	z-index: 1
+	div
+		position: absolute
+		background-repeat: no-repeat
+		background-size: 100% 100%
+	h1
+		letter-spacing: 1px
+		margin: 0
+		text-align: center
+		font-size: 49px
+		font-weight: bold
+		color: #1a9ce3
+		&.title1:before
+			//position: absolute\0\9
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			box-shadow: 174px 14px #b82400, 166px 31px #b82400, 221px 19px #f16d01, 217px 27px #f16d01
+			font-family: '微軟正黑體'
+		&.title2:before
+			//position: absolute\0\9
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			box-shadow: 327px 32px #10761e, 322px 38px #10761e, 304px 32px #10761e
+	.colorRed
+		color: #b82400
+	.colorOrange
+		color: #f16d01
+	.colorGreen
+		color: #10761e
+
+
+
+
+
+@media screen and(max-width: 640px)
+	::-webkit-scrollbar
+		display: none
+	body
+		min-width: auto
+	.kv
+		position: static
+		margin: 160/640*100+vw auto 135/640*100+vw
+	.blockWrap
+		width: auto
+		height: auto
+		margin: 0 7.8125vw
+		h1
+			font-size: 49/640*100+vw
+			font-weight: bold
+			color: #1a9ce3
+			&.title1:before
+				content: ''
+				display: block
+				width: 6/640*100+vw
+				height: 6/640*100+vw
+				box-shadow: 27.5vw 2.2vw #b82400, 26.1vw 4.5vw #b82400, 34.85vw 2.8vw #f16d01, 34.4vw 4.2vw #f16d01
+				@media screen and(max-width: 425px)
+					box-shadow: 27.5vw 2.2vw #b82400, 26.1vw 4.3vw #b82400, 34.85vw 2.8vw #f16d01, 34.4vw 3.85vw #f16d01
+			&.title2:before
+				content: ''
+				display: block
+				width: 6/640*100+vw
+				height: 6/640*100+vw
+				box-shadow: 51.4vw 4.7vw #10761e, 50.5vw 5.8vw #10761e, 48vw 4.7vw #10761e
+				@media screen and(max-width: 425px)
+					box-shadow: 51.4vw 4.65vw #10761e, 50.5vw 5.5vw #10761e, 48vw 4.65vw #10761e

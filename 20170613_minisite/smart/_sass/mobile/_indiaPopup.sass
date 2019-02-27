@@ -1,0 +1,235 @@
+@media screen and (max-width: $pad-l)
+	.popup_wrap
+		.popup_content.india
+			width: calc(100% - 60px)
+			//內容區塊的箭頭
+			.arrow_box
+				position: absolute
+				left: 0
+				right: 0
+				margin: auto
+				width: 270px
+				.next, .prev
+					width: 50px
+					height: 50px
+					.icon
+						width: 24px
+						height: 38px
+					&:hover
+						.icon
+							transform: translateX(0)
+			&.popup_1, &.popup_2
+				.arrow_box
+					bottom: -1200px
+			&.popup_3, &.popup_4
+				.arrow_box
+					bottom: -1130px
+
+
+			//預設畫面
+			.popup_default
+				padding: 30px 20px 20px
+				h2
+					margin-bottom: 18px
+					font-size: 36px
+				p
+					font-size: 22px
+				span.desktop, br.desktop
+					display: none
+				br.mobile
+					display: block
+				.item_wrap
+					justify-content: space-between
+					margin: 0 auto
+				.item
+					margin: 25px 0 0
+				.pic-box
+					width: 256px
+					height: 204px
+				h3
+					margin: 8px 15px
+					font-size: 18px
+					i
+						font-size: 26px
+				//預設四塊的藍字
+				.title_wrap
+					height: 65px
+				h4
+					font-size: 18px
+					&:before
+						right: -12px
+						bottom: 6px
+						width: 9px
+						height: 15px
+						background-repeat: no-repeat
+				.info
+					margin-top: 20px
+					text-align: left
+					font-size: 18px
+				a
+					padding: 0 44px
+					margin-top: 20px
+					font-size: 25px
+				.item:hover
+					.pic-box
+						transform: scale(1)
+					h4:before
+						right: -12px
+
+
+			@for $i from 1 through 4
+				.popup_#{$i}
+					.bg-box
+						background-image: url(india-popup-#{$i}-m.jpg)
+			.popup_box
+				width: 581px
+				height: auto
+				background-size: contain
+				.bg-box
+					position: static
+					height: 506px
+					background-repeat: no-repeat
+					background-size: contain
+				.info-box
+					position: static
+					max-width: 100%
+					padding: 22px 20px 60px
+				h3
+					margin-bottom: 15px
+					font-size: 25px
+					i
+						font-size: 35px
+				h4
+					margin-bottom: 12px
+					font-size: 25px
+				p
+					margin-bottom: 5px
+					font-size: 22px
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: $pad-l)
+	.popup_wrap
+		.popup_content.india
+			width: calc(100% - #{60/640*100+vw})
+			//內容區塊的箭頭
+			.arrow_box
+				width: 270/640*100+vw
+				.next, .prev
+					width: 50/640*100+vw
+					height: 50/640*100+vw
+					.icon
+						width: 24/640*100+vw
+						height: 38/640*100+vw
+			&.popup_1, &.popup_2
+				.arrow_box
+					bottom: -1200/640*100+vw
+			&.popup_3, &.popup_4
+				.arrow_box
+					bottom: -1130/640*100+vw
+
+
+			//預設畫面
+			.popup_default
+				padding: 30/640*100+vw 20/640*100+vw 20/640*100+vw
+				h2
+					margin-bottom: 18/640*100+vw
+					font-size: 36/640*100+vw
+				p
+					font-size: 22/640*100+vw
+				.item
+					margin: 25/640*100+vw 0 0
+				.pic-box
+					width: 256/640*100+vw
+					height: 204/640*100+vw
+				h3
+					margin: 8/640*100+vw 15/640*100+vw
+					font-size: 18/640*100+vw
+					i
+						font-size: 26/640*100+vw
+				.title_wrap
+					height: 65/640*100+vw
+				h4
+					font-size: 18/640*100+vw
+					&:before
+						right: -12/640*100+vw
+						bottom: 6/640*100+vw
+						width: 9/640*100+vw
+						height: 15/640*100+vw
+				.info
+					margin-top: 20/640*100+vw
+					font-size: 18/640*100+vw
+				a
+					padding: 0 44/640*100+vw
+					margin-top: 20/640*100+vw
+					font-size: 25/640*100+vw
+				.item:hover
+					h4:before
+						right: -12/640*100+vw
+
+
+			.popup_box
+				width: 581/640*100+vw
+				.bg-box
+					height: 506/640*100+vw
+				.info-box
+					padding: 22/640*100+vw 20/640*100+vw 60/640*100+vw
+				h3
+					margin-bottom: 15/640*100+vw
+					font-size: 25/640*100+vw
+					i
+						font-size: 35/640*100+vw
+				h4
+					margin-bottom: 12/640*100+vw
+					font-size: 25/640*100+vw
+				p
+					margin-bottom: 5/640*100+vw
+					font-size: 22/640*100+vw
+
+
+
+
+@media screen and (max-width: $phone-m)
+	.popup_wrap
+		.popup_content.india
+			//width: calc(100% - #{20/425*100+vw})
+			.popup_default
+				padding: 20/425*100+vw 10/425*100+vw 15/425*100+vw
+				.pic-box
+					width: 42vw
+				h4
+					margin-left: -7/425*100+vw
+					&:before
+						right: -7/425*100+vw
+				.item:hover
+					h4:before
+						right: -7/425*100+vw
+
+
+
+
+
+@media screen and (max-width: $phone-s)
+	.popup_wrap
+		.popup_content.india
+			&.popup_1, &.popup_2
+				.arrow_box
+					bottom: -205vw
+			&.popup_3, &.popup_4
+				.arrow_box
+					bottom: -192vw
+			.popup_default
+				.pic-box
+				h4
+					transform: scale(.85)
+					&:before
+						display: none
+				.item:hover
+					h4:before
+						display: none

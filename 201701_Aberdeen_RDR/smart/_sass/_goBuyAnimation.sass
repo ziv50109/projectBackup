@@ -1,0 +1,57 @@
+@keyframes shake
+	0%, 9%, 31%, 100%
+		transform: translate(0, 0)
+		background-position-y: -154px
+	10%, 20%
+		transform: translate(-7px, 0)
+	15%
+		transform: translate(7px, 0)
+	25%
+		transform: translate(3px, 0)
+	30%
+		transform: translate(-3px, 0)
+
+@keyframes ligth
+	0%
+		background-position-y: -154px
+	15%
+		background-position-y: 154px
+	15.01%
+		background-position-y: -154px
+	100%
+		background-position-y: -154px
+
+// @keyframes run
+// 	0%
+// 		background-image: url(../Images/run1.png)
+// 	32.9%
+// 		background-image: url(../Images/run1.png)
+// 	33%
+// 		background-image: url(../Images/run2.png)
+// 	65.9%
+// 		background-image: url(../Images/run2.png)
+// 	66%
+// 		background-image: url(../Images/run3.png)
+// 	99.9%
+// 		background-image: url(../Images/run3.png)
+// 	100%
+// 		background-image: url(../Images/run1.png)
+.run1
+	background-image: url(../Images/run1.png) !important
+.run2
+	background-image: url(../Images/run2.png) !important
+.run3
+	background-image: url(../Images/run3.png) !important
+
+@media screen and(max-width: 640px)
+	@keyframes ligth
+		0%
+			background-position-x: -160/640*100+vw
+		15%
+			background-position-x: 160/640*100+vw
+		15.01%
+			background-position-x: -160/640*100+vw
+		100%
+			background-position-x: -160/640*100+vw
+
+

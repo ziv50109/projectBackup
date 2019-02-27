@@ -1,0 +1,76 @@
+.popup_content.section_1-chart
+	display: none
+@media screen and (max-width: $pad-l)
+	.popup_content.section_1-chart
+		display: block
+		top: 0
+		width: 100%
+		visibility: hidden
+		background: none
+		&.active
+			opacity: 1
+			visibility: visible
+		@for $i from 1 through 5
+			&.popup_#{$i}
+				.popup_#{$i}
+					opacity: 1
+					visibility: visible
+
+		.popup-close
+			top: 35px
+			right: 30px
+			svg
+				width: 45px
+				height: 45px
+				fill: #08A9E5
+
+		.popup_box
+			opacity: 0
+			visibility: hidden
+			position: absolute
+			top: 250px
+			width: 100%
+			height: 790px
+			transition: all $popup--duration
+		h3
+			line-height: 1.3
+			margin-bottom: 25px
+			text-align: center
+			font-size: 27px
+			font-weight: bold
+			color: #00aae7
+		.chart_box
+			padding: 0 30px
+		.chart
+			width: 100%
+		.info
+			max-width: 560px
+			margin-top: 15px
+			font-size: 15px
+
+
+
+
+
+
+@media screen and (max-width: $phone-l)
+	.popup_content.section_1-chart
+		.popup-close
+			top: 35/640*100+vw
+			right: 30/640*100+vw
+			svg
+				width: 45/640*100+vw
+				height: 45/640*100+vw
+
+		.popup_box
+			top: 250/640*100+vw
+			height: 790/640*100+vw
+		h3
+			margin-bottom: 25/640*100+vw
+			font-size: 27/640*100+vw
+		.chart_box
+			padding: 0 30/640*100+vw
+		.info
+			max-width: 560/640*100+vw
+			margin-top: 15/640*100+vw
+			font-size: 15/640*100+vw

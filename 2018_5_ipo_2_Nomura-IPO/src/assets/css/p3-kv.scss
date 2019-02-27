@@ -1,0 +1,105 @@
+.p3 .kv_wrap {
+  .cleek_wrap {
+    transform-origin: right top;
+    transform: rotate(78deg);
+    transition: transform .6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-delay: .5s;
+    .cleek-shadow {
+      opacity: 1;
+      transition: opacity 1s;
+      transition-delay: .5s;
+    }
+    .ball-shadow {
+      transform: translate3d(0,-15%,0);
+      opacity: 0;
+      transition: transform .55s linear .58s, opacity .55s linear .7s;
+    }
+  }
+  .ball {
+    transform: translate3d(0,12%,0);
+    opacity: 0;
+    transition: transform .57s, opacity .4s;
+  }
+  .text {
+    width: 0;
+    max-width: 305px;
+    transition: width 1.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition-delay: 1.08s;
+  }
+  .slogan {
+    transform: translate3d(-4%,0,0);
+    opacity: 0;
+    transition: transform .4s linear 1.4s, opacity .4s linear 1.4s;
+  }
+  .type_wrap {
+    transform: translate3d(0,8%,0);
+    opacity: 0;
+    transition: transform .56s linear 1.7s, opacity .56s linear 1.7s;
+  }
+  & + .menu {
+    opacity: 0;
+  }
+  & ~ .article_content .title_box {
+    transform: translate3d(0,12%,0);
+    opacity: 0;
+    transition: transform .44s cubic-bezier(0.540, 0.750, 0.380, 1.300) 2.6s, opacity .44s 2.6s;
+  }
+
+  &.animation {
+    .ball, .slogan, .type_wrap, .cleek_wrap .ball-shadow {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+    .cleek_wrap {
+      transform: rotate(0);
+      .cleek-shadow {
+        opacity: 0;
+      }
+    }
+    .text {
+      width: 100%;
+    }
+  }
+  &.animation + .menu {
+    opacity: 1;
+    @media screen and (min-width: 1025px) {
+      animation: menu 3.14s;
+    }
+  }
+  &.animation ~ .article_content .title_box {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+@keyframes menu {
+  0% {
+    transform: translate3d(0,4%,0);
+    opacity: 0;
+  }
+  63.6% {
+    transform: translate3d(0,4%,0);
+    opacity: 0;
+  }
+  79% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  //手機板選單動畫
+  .p3 .kv_wrap {
+    &.animation + .menu {
+      transform: translate3d(0,-100%,0);
+      transition: transform .44s;
+    }
+    &.animation + .menu.open {
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+

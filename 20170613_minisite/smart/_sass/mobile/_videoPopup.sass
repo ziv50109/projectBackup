@@ -1,0 +1,31 @@
+@media screen and (max-width: $pad-l)
+	div.video_popup
+		.video-container
+			top: 145px
+			max-width: 575px
+			max-height: 323px
+		.close
+			top: 145px - 22px
+			left: auto
+			right: 17px
+			width: 46px
+			height: 46px
+			svg
+				width: 22px
+				height: 22px
+
+@media screen and (max-width: $phone-l)
+	div.video_popup
+		.video-container
+			top: 145/640*100+vw
+			max-width: 575/640*100+vw
+			max-height: 323/640*100+vw
+		.close
+			top: 123/640*100+vw
+			left: auto
+			right: 17/640*100+vw
+			width: 46/640*100+vw
+			height: 46/640*100+vw
+			svg
+				width: 22/640*100+vw
+				height: 22/640*100+vw

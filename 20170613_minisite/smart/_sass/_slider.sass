@@ -1,0 +1,62 @@
+.slider
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+.slider_box-wrap
+	width: 100%
+	height: calc(100% - 32px)
+.slide_box
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	visibility: hidden
+	opacity: 0
+	&.active
+		visibility: visible
+		opacity: 1
+		z-index: 2
+.box
+	width: 100%
+	height: 100%
+	margin: 0 auto
+.prev, .next
+	position: absolute
+	bottom: 0
+	width: 15px
+	height: 50px
+	cursor: pointer
+	z-index: 2
+.prev
+	left: 0
+	.icon
+		left: 0
+.next
+	right: 0
+	.icon
+		right: 0
+.dot_wrap
+	display: flex
+	i
+		display: block
+		width: 13px
+		height: 13px
+		margin: 15px 9px
+		border-radius: 100%
+		background-color: #DEDEDE
+		transition: all .3s
+		cursor: pointer
+	.active
+		background-color: #3DB6EA
+
+
+
+
+@media screen and (max-width: $pc-s)
+	.dot_wrap
+		i
+			width: 13px * .8
+			height: 13px * .8
+			margin: 15px * .8 9px * .8

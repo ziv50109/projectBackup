@@ -1,0 +1,62 @@
+.popup_wrap
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	transition: all $popup--duration
+	z-index: 3
+	.popup-bg
+		opacity: 0
+		visibility: hidden
+		position: fixed
+		width: 100%
+		height: 150%
+		background: rgba(#fff,.8)
+		transition: all $popup--duration
+	.popup_content
+		opacity: 0
+		position: absolute
+		top: 145px
+		left: 0
+		right: 0
+		margin: auto
+		width: 100%
+		max-width: 1760px
+		background-color: #E7E7E7
+	.popup-close
+		position: absolute
+		top: 20px
+		right: 23px
+		cursor: pointer
+		z-index: 1
+		svg
+			width: 26px
+			height: 26px
+
+
+
+.popup_wrap
+	&.open
+		opacity: 1
+		overflow: visible
+		.popup-bg
+			opacity: 1
+			visibility: visible
+
+.popup_content
+	&.active
+		opacity: 1
+
+//開啟的動畫
+@keyframes popupShow
+	0%
+		opacity: 0
+		overflow: hidden
+	0.1%
+		opacity: 0
+		overflow: initial
+	100%
+		opacity: 1
+		overflow: initial

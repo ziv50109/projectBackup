@@ -1,0 +1,113 @@
+.mobile { display: none; }
+
+.article_box {
+  text-align: center;
+  .a-title {
+    height: 67px;
+  }
+  h3 {
+    text-align: left;
+    max-width: 960px;
+    margin: 0 auto;
+    svg {
+      vertical-align: middle;
+      position: relative;
+      top: -8px;
+      display: inline-block;
+      width: 138px;
+      height: 84px;
+    }
+    span {
+      font-size: 36px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  .article_content {
+    text-align: left;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 30px;
+  }
+
+  .info {
+    line-height: 1.4;
+    font-size: 13px;
+    color: #221815;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .article_box {
+    .a-title { height: 67/1400*100vw; }
+    h3 {
+      max-width: 900/1400*100vw;
+      svg {
+        top: -8/1400*100vw;
+        width: 138/1400*100vw;
+        height: 84/1400*100vw;
+      }
+      span { font-size: 36/1400*100vw; }
+    }
+    .article_content {
+      max-width: 960/1400*100vw;
+      margin-left: 280/1400*100vw;
+      padding: 80/1400*100vw 0;
+    }
+    .info { font-size: 13/1400*100vw; }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .mobile { display: block; }
+  .article_box {
+    .a-title { height: 100px; }
+    h3 {
+      max-width: 84%;
+      line-height: 2.1;
+      svg {
+        top: -10px;
+        width: 184px;
+        height: 114px;
+      }
+      span {
+        padding: 0 30px;
+        font-size: 48px;
+      }
+    }
+    .article_content {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+    .info { font-size: 24px; }
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .article_box {
+    .a-title { height: 100/750*100vw; }
+    h3 {
+      max-width: 104%;
+      margin-left: -44/750*100vw;
+      svg {
+        top: -10/750*100vw;
+        width: 184/750*100vw;
+        height: 114/750*100vw;
+      }
+      span {
+        padding: 0 12/750*100vw;
+        font-size: 48/750*100vw;
+      }
+    }
+    .article_content {
+      max-width: 750/750*100vw;
+      padding: 64/750*100vw 0;
+    }
+    .info { font-size: 22/750*100vw; }
+  }
+}

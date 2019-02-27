@@ -1,0 +1,484 @@
+//上方nav 樣式
+@import "nav.sass"
+
+//行動版 選單 樣式
+@import "mobileMenu.sass"
+
+//PC版浮動的"立馬投資"
+@import "goBuy.sass"
+
+//rdr
+@import "videoPopup.sass"
+
+//footer
+@import "footer.sass"
+
+
+
+body
+	min-width: 1100px
+	&.pageload *
+		transition: none !important
+
+.oldIE
+	display: none
+
+.readyShow
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	transform: translate(0, -80px)
+
+.readyTextShow
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	transform: translate(0, 20px)
+
+.scrollShow
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	transform: translate(0, 40px)
+
+
+
+.content
+	position: relative
+	max-width: 980px
+	//height: 1000px
+	margin: 0 auto
+	padding: 0 0 32px
+	.mobile
+		display: none
+.picBox
+	position: absolute
+	display: inline-block
+	top: 8px
+	right: 18px
+	z-index: 2
+	img
+		transition: all 1s
+	.mobile
+		display: none
+
+.titleWrap
+	position: relative
+	margin: 130px 0 25px
+	padding-left: 50px
+	transition: all 1s
+	p
+		margin-bottom: 13px
+		font-size: 20px
+		color: #777777
+	.title
+		line-height: 48px
+		font-size: 40px
+		font-weight: bold
+		color: #182d60
+.titlePic
+	position: relative
+	max-width: 100%
+	margin-top: 0
+	transition: all .5s
+	z-index: 0
+	&+.section
+		margin-top: -22px
+.article
+	padding: 27px 100px 42px 98px
+	background-color: #D1EBF9
+	.section
+		transition: all .5s
+		b
+			font-weight: bold
+		p
+			position: relative
+			line-height: 28px
+			text-justify: distribute\0
+			text-align: justify
+			font-size: 18px
+			color: #1d1d1d
+			z-index: 1
+		h2
+			line-height: 40px
+			margin: 18px 0 10px
+			font-size: 22px
+			font-weight: bold
+			color: #00a0e9
+			span
+				margin-left: 20px
+		h3
+			margin-bottom: 18px
+			padding-left: 23px
+			font-size: 20px
+			font-weight: bold
+			color: #182d60
+		h4
+			margin-bottom: 16px
+			padding-left: 30px
+			font-size: 17px
+			font-weight: bold
+			color: #1a9ce3
+		.qaTitle
+			padding-top: 8px
+			font-weight: bold
+			color: #182d60
+		.question, .answer
+			margin-bottom: 14px
+			padding-left: 35px
+			text-align: left
+			&:before
+				margin-left: -35px
+		.question
+			font-weight: bold
+			color: #182d60
+			&:before
+				content: '問：'
+		.answer
+			color: #1d1d1d
+			&:before
+				content: '答：'
+				font-weight: bold
+			&.noTitle
+				&:before
+					display: none
+		.twoColumn
+			margin-bottom: 5px
+			.left, .right
+				display: inline-block
+				width: 50%
+				margin-right: -4px
+				vertical-align: top
+			.mobile
+				display: none
+		.info
+			margin-top: 12px
+			transition: all .5s
+			p
+				line-height: 26px
+				margin-bottom: 0
+				padding-left: 6px
+				font-size: 16px
+			span
+				display: inline
+		.btnWrap
+			margin: 20px 0 0
+			text-align: center
+			a
+				display: inline-block
+				position: relative
+				width: 150px
+				height: 40px
+				line-height: 40px
+				margin: 0 22px
+				white-space: nowrap
+				text-align: center
+				font-size: 24px
+				font-weight: bold
+				color: #fff
+				background-color: #1a9ce3
+				border: none
+				font-family: inherit
+				cursor: pointer
+				&:hover
+					box-shadow: 0 0 5px rgba(#000,.5)
+					&:before, &:after
+						content: ''
+						position: absolute
+						display: block
+					&:before
+						top: 0
+						right: 0
+						height: 100%
+						width: 3px
+						background-image: linear-gradient(transparent, #0F6D9F)
+					&:after
+						right: 0
+						bottom: 0
+						height: 3px
+						width: 100%
+						background-image: linear-gradient(to right, transparent, #0F6D9F)
+	.section1
+		p
+			width: 545px
+			margin-bottom: 20px
+	.section2
+		>p
+			margin-bottom: 20px
+		.qaTitle
+			padding-top: 0
+			&+p
+				margin-bottom: 20px
+		.twoColumn
+			.left
+				width: 340px
+				padding-right: 25px
+				p
+					text-justify: distribute\0
+					text-align: justify
+					padding-bottom: 15px
+			.right
+				width: 445px
+				padding-top: 17px
+	.section3
+		h2
+			margin: 8px 0
+		>p
+			margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 20px
+		.twoColumn
+			.left
+				width: 407px
+				padding-right: 30px
+				p
+					text-justify: distribute\0
+					text-align: justify
+					margin-bottom: 15px
+			.right
+				width: 373px
+				padding-top: 45px
+.article2
+	padding: 0 0 55px
+	.article
+		padding-top: 35px
+	.titlePic
+		&+.section
+			margin-top: -55px
+	.section
+		h2
+			margin: 30px 0 20px
+	.section1
+		p
+			width: auto
+	.section2
+		>p
+			margin-bottom: 20px
+	.section3
+		h2
+			span
+				margin: 0
+		>p
+			margin-bottom: 20px
+		.twoColumn
+			margin: 30px 0 20px
+			&:after
+				content: ''
+				display: block
+				clear: both
+			.desktopLeft
+				float: left
+				width: 330px
+				padding-right: 30px
+				p:first-child
+					margin-bottom: 25px
+			.desktopRight
+				float: right
+				width: 782px - 330px
+				padding-top: 0
+				h3
+					margin-bottom: 10px
+				h4
+					padding-left: 23px
+			.info
+				p
+					line-height: 22px
+		.btnWrap
+			margin: 55px 0 15px
+
+
+
+
+
+
+
+
+@media screen and(max-width: 640px)
+	body
+		min-width: auto
+
+	.readyShow
+		transform: translate(0, -5vw)
+	.readyTextShow
+		transform: translate(0, 20/640*100+vw)
+	.scrollShow
+		transform: translate(0, 40/640*100+vw)
+	.content
+		position: relative
+		padding: 87/640*100+vw 0 0
+		.desktop
+			display: none
+		.mobile
+			display: block
+	.picBox
+			top: 140/640*100+vw
+			right: 50/640*100+vw
+			img
+				width: 221/640*100+vw
+			.desktop
+				display: none
+			.mobile
+				display: block
+	.titleWrap
+		margin: 75/640*100+vw 0
+		padding-left: 50/640*100+vw
+		p
+			margin-bottom: 13/640*100+vw
+			font-size: 28/640*100+vw
+		.title
+			line-height: 55/640*100+vw
+			font-size: 48/640*100+vw
+	.titlePic
+		margin-top: -28/640*100+vw
+		&+.section
+			margin-top: 0
+	.article
+		padding: 0 46/640*100+vw
+		background: none
+		b
+			font-weight: bold
+		.section
+			p
+				line-height: 40/640*100+vw
+				font-size: 28/640*100+vw
+			h2
+				line-height: 40/640*100+vw
+				margin: 28/640*100+vw 0
+				font-size: 28/640*100+vw
+				span
+					display: block
+					margin-left: 0
+			h3
+				margin-bottom: 16/640*100+vw
+				padding-left: 30/640*100+vw
+				font-size: 26/640*100+vw
+			h4
+				margin-bottom: 16/640*100+vw
+				padding-left: 30/640*100+vw
+				font-size: 22/640*100+vw
+			.qaTitle
+				padding-top: 8/640*100+vw
+			.question, .answer
+				padding-left: 57/640*100+vw
+				margin-bottom: 24/640*100+vw
+				&:before
+					margin-left: -57/640*100+vw
+			.twoColumn
+				margin-bottom: 24/640*100+vw
+				.left, .right
+					display: block
+					width: 100% !important
+					margin: 0
+				img
+					max-width: 100%
+				.desktop
+					display: none
+				.mobile
+					display: block
+			.info
+				margin-top: 12/640*100+vw
+				p
+					line-height: 25/640*100+vw
+					padding-left: 6/640*100+vw
+					font-size: 20/640*100+vw
+				span
+					display: block
+			.btnWrap
+				margin: 55/640*100+vw 0 100/640*100+vw
+				a
+					width: 194/640*100+vw
+					height: 51/640*100+vw
+					line-height: 51/640*100+vw
+					margin: 0 22/640*100+vw
+					font-size: 4.5vw
+					&:hover
+						box-shadow: none
+						&:before, &:after
+							display: none
+		.section1
+			p
+				width: auto
+				margin-bottom: 20/640*100+vw
+		.section2
+			>p
+				margin-bottom: 24/640*100+vw
+			.qaTitle
+				padding-top: 8/640*100+vw
+				&+p
+					margin-bottom: 24/640*100+vw
+			.twoColumn
+				.left
+					padding-right: 0
+					p
+						text-justify: distribute\0
+						text-align: justify
+						padding-bottom: 25/640*100+vw
+						&:last-of-type
+							padding-bottom: 30/640*100+vw
+				.right
+					padding-top: 0
+					h3
+						margin-bottom: 20/640*100+vw
+					.info
+						margin: 20/640*100+vw 0 45/640*100+vw
+		.section3
+			h2
+				margin: 28/640*100+vw 0
+				&:last-of-type
+					margin-top: 40/640*100+vw
+			>p
+				margin-bottom: 25/640*100+vw
+			.twoColumn
+				.left
+					padding-right: 0
+					p
+						text-justify: distribute\0
+						text-align: justify
+						margin-bottom: 25/640*100+vw
+				.right
+					padding-top: 35/640*100+vw
+	.article2
+		padding: 13.59375vw 0 0
+		.article
+			padding-top: 30/640*100+vw
+		.titlePic
+			&+.section
+				margin-top: -55/640*100+vw
+		.section
+			h2
+				margin: 4.375vw 0
+		.section2
+			>p
+				margin-bottom: 3.75vw
+		.section3
+			>p
+				margin-bottom: 3.75vw
+				&:last-of-type
+					margin-bottom: 50/640*100+vw
+			.twoColumn
+				margin: 0 0 3.75vw
+				.desktopRight
+					float: none
+					width: auto
+					margin-bottom: 35/640*100+vw
+					padding-right: 0
+					h3
+						margin-bottom: 2.5vw
+					h4
+						padding-left: 4.6875vw
+					.info
+						margin: 1.875vw 0 0
+						p
+							line-height: 3.90625vw
+				.desktopLeft
+					float: none
+					width: auto
+					padding: 17/640*100+vw 0
+					p
+						margin-bottom: 3.75vw
+						&:first-child
+							margin: 0
+						&:last-of-type
+							margin: 0
+			.btnWrap
+				margin: 12.03125vw 0 15.625vw
+
+
+

@@ -1,0 +1,180 @@
+@media screen and (max-width: $pad-l)
+	.bg
+		background-position-y: 70px
+	.section
+		position: relative
+		min-width: auto
+		height: 930px
+		overflow: hidden
+		.section_bg
+			margin: 0 auto
+			padding-top: .1px
+			.bg-box
+				position: absolute
+				left: 0
+				right: 0
+				margin: auto
+				text-align: center
+				&.bg2
+					svg
+						transition: all .5s
+		&.section_1
+			margin-top: 300px
+			.bg-box
+				margin: 280px auto 0
+				svg
+					width: 540px
+					height: 514px
+				&.bg2.big
+					svg
+						transform: scale(1.56) translateY(-25px)
+		&.section_2
+			margin-top: 0
+			.bg-box
+				margin: 285px auto 0
+				svg
+					width: 525px
+					height: 500px
+				&.bg2.big
+					svg
+						transform: scale(2.1) translate(35px, 80px)
+		&.section_3
+			margin-top: -20px
+			.bg-box
+				margin: 310px auto 0
+				svg
+					width: 578px
+					height: 447px
+					transform: rotate(3deg)
+				&.bg2.big
+					svg
+						transform: scale(2.5) translate(-50px, 100px) rotate(5deg)
+		&.section_4
+			margin-top: 60px
+			.bg-box
+				margin: 335px auto 0
+				svg
+					width: 584px
+					height: 402px
+				&.bg2.big
+					svg
+						transform: scale(2)
+		&.section_5
+			margin-top: 270px
+		.content
+			position: absolute
+			right: 0
+			left: 0
+			margin: 80px auto 0
+			h1
+				margin-top: 70px
+				font-size: 35px
+		.content_list
+			p
+				font-size: 23px
+				&:before
+					top: 10px
+					left: -12px
+					width: 12px
+					height: 12px
+		.nextArrow
+			top: 0 !important
+			margin-top: 30px
+			.next-icon
+				width: 37px
+				height: 17px
+
+
+
+
+	//section 標題
+	$section--h1--delay: $bg2--duration + $bg2--delay + .5s
+	//section 內容
+	$section--content--delay: ($section--h1--delay + $section--h1--duration) * .55 + .5s
+	.section
+		h1
+			transition-delay: $section--h1--delay
+		&.section_1
+			.slider
+				transition-delay: $section--content--delay
+		&.section_2
+			.center-box, .arrow_box
+				transition-delay: $section--content--delay
+		&.section_3
+			.left, .right
+				transition-delay: $section--content--delay
+		&.section_4
+			.content-default, .bottom_info
+				transition-delay: $section--content--delay
+		&.section_5
+			.content
+				transition-delay: .2s
+
+
+
+
+
+@media screen and (max-width: $phone-l)
+	.bg
+		background-image: url(bg-m.jpg)
+		background-position-y: -70/640*100+vw
+		//background-size: 7300/640*100+vw 1000/640*100+vw
+	.section
+		//height: 930/640*100+vw
+		&.section_1
+			margin-top: 200px
+			.bg-box
+				margin: 280/640*100+vw auto 0
+				svg
+					width: 540/640*100+vw
+					height: 514/640*100+vw
+				&.bg2.big
+					svg
+						transform: scale(1.56) translateY(-25/640*100+vw)
+		&.section_2
+			margin-top: -250px
+			.bg-box
+				margin: 285/640*100+vw auto 0
+				svg
+					width: 525/640*100+vw
+					height: 500/640*100+vw
+				&.bg2.big
+					svg
+						transform: scale(2.1) translate(35/640*100+vw, 80/640*100+vw)
+		&.section_3
+			margin-top: 100px
+			.bg-box
+				margin: 310/640*100+vw auto 0
+				svg
+					width: 578/640*100+vw
+					height: 447/640*100+vw
+				&.bg2.big
+					svg
+						transform: scale(2.5) translate(-50/640*100+vw, 100/640*100+vw) rotate(5deg)
+		&.section_4
+			margin-top: 80px
+			.bg-box
+				margin: 335/640*100+vw auto 0
+				svg
+					width: 584/640*100+vw
+					height: 402/640*100+vw
+		&.section_5
+			margin-top: 270/640*100+vw
+		.content
+			margin: 80/640*100+vw auto 0
+			h1
+				margin-top: 70/640*100+vw
+				font-size: 35/640*100+vw
+		.content_list
+			p
+				font-size: 23/640*100+vw
+				&:before
+					top: 10/640*100+vw
+					left: -12/640*100+vw
+					width: 12/640*100+vw
+					height: 12/640*100+vw
+		.nextArrow
+			margin-top: 30/640*100+vw
+			.next-icon
+				width: 37/640*100+vw
+				height: 17/640*100+vw

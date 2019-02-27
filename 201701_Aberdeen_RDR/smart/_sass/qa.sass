@@ -1,0 +1,294 @@
+//上方nav 樣式
+@import "nav.sass"
+
+//行動版 選單 樣式
+@import "mobileMenu.sass"
+
+//PC版浮動的"立馬投資"
+@import "goBuy.sass"
+
+//rdr
+@import "videoPopup.sass"
+
+//footer
+@import "footer.sass"
+
+
+
+body
+	min-width: 1100px
+	&.pageload *
+		transition: none !important
+
+.oldIE
+	display: none
+
+.readyShow
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	transform: translate(0, -80px)
+
+.delayShow
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+
+.content
+	position: relative
+	max-width: 980px
+	margin: 0 auto
+	padding: 190px 0 55px
+	img
+		transition: opacity .7s, transform .7s
+
+.qaWrap
+	position: relative
+	display: none
+	margin: 0 auto
+	opacity: 0
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	transition: opacity .3s
+	&.show
+		position: relative
+		display: block
+		z-index: 1
+		opacity: 1
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+		transition: opacity .3s
+.picBox
+	position: absolute
+	display: inline-block
+	top: 120px
+	right: 55px
+	z-index: 2
+	.mobile
+		display: none
+.qTitle
+	position: relative
+	width: 652px
+	line-height: 38px
+	margin-bottom: 60px
+	padding-left: 70px
+	font-size: 34px
+	font-weight: bold
+	color: #1a9ce3
+	transition: opacity .7s, transform .7s
+	&.desktop
+		display: block
+	&.mobile
+		display: none
+.qaBox
+	position: relative
+	padding: 55px 0 50px
+	background-color: #D1EBF9
+	.answerOption
+		position: relative
+		width: 410px
+		line-height: 30px
+		margin: 0 auto 18px
+		padding: 10px 35px
+		border-radius: 8px
+		font-size: 22px
+		color: #373737
+		box-shadow: 1px 0 6px rgba(#000, .46)
+		background-color: #FFF
+		cursor: pointer
+		transition: opacity .8s
+		counter-increment: answerNum
+		&:before
+			content: counter(answerNum)
+			position: absolute
+			top: 50%
+			margin-top: -16px
+			left: -18px
+			display: inline-block
+			line-height: 1 !important
+			padding: 4px 9.65px 6px
+			border-radius: 100%
+			font-size: 22px
+			color: #fff
+			background-color: #1a9ce3
+		&:hover
+			&:before
+				background-color: #a2a4a3
+
+	.answerBox
+		position: absolute
+		background-color: #D1EBF9
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		p
+			line-height: 40px
+			padding: 0 20px
+			font-size: 30px
+			text-justify: distribute\0
+			text-align: justify
+			color: #182d60
+		.btnWrap
+			width: 450px
+			vertical-align: top
+			margin-top: 40px
+			text-align: center
+			a
+				display: inline-block
+				float: right
+				position: relative
+				width: 212px
+				height: 45px
+				line-height: 45px
+				margin: 0 18px
+				text-align: center
+				font-size: 26px
+				font-weight: bold
+				color: #fff
+				background-color: #1a9ce3
+				border: none
+				font-family: inherit
+				cursor: pointer
+				&:hover
+					box-shadow: 0 0 5px rgba(#000,.5)
+					&:before, &:after
+						content: ''
+						position: absolute
+						display: block
+					&:before
+						top: 0
+						right: 0
+						height: 100%
+						width: 4px
+						background-image: linear-gradient(transparent, #0F6D9F)
+					&:after
+						right: 0
+						bottom: 0
+						height: 4px
+						width: 100%
+						background-image: linear-gradient(to right, transparent, #0F6D9F)
+			.goBuy
+				margin-top: 48px
+	&.published
+		padding-left: 70px
+		.qTitle
+			width: 582px
+			padding-left: 0
+		.answerOption
+			display: none
+			width: 405px
+			margin: 0 0 22px 7px
+			padding: 15px 35px
+			&.ans
+				display: block
+			&:before
+				content: 'A'
+				padding: 5px 9.85px 7px
+				text-align: center
+				background-color: #a2a4a3
+				transform: scale(1.4)
+				transition: all .3s
+		.answerBox
+			position: static
+			opacity: 1
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+			transition: all .5s
+			p
+				display: inline-block
+				width: 420px
+				padding: 0 5px
+				font-size: 20px
+				line-height: 28px
+			.btnWrap
+				display: inline-block
+				margin-top: 15px
+
+
+
+
+
+
+
+
+@media screen and(max-width: 640px)
+	body
+		min-width: auto
+	.readyShow
+		transform: translate(0, -5vw)
+
+	.content
+		padding: 87/640*100+vw 0 0
+	.qaWrap
+		top: 0
+	.picBox
+			top: 140/640*100+vw
+			right: 50/640*100+vw
+			img
+				width: 130/640*100+vw
+			.desktop
+				display: none
+			.mobile
+				display: block
+	.qTitle
+		position: relative
+		width: 420/640*100+vw
+		height: 118/640*100+vw
+		line-height: 38/640*100+vw
+		margin: 50/640*100+vw 0 25/640*100+vw
+		padding-left: 60/640*100+vw
+		font-size: 34/640*100+vw
+		font-weight: bold
+		color: #1a9ce3
+		&.desktop
+			display: none
+		&.mobile
+			display: block
+	.qaBox
+		height: 800/640*100+vw
+		padding: 90/640*100+vw 60/640*100+vw 140/640*100+vw 70/640*100+vw
+		.answerOption
+			width: auto
+			line-height: 40/640*100+vw
+			margin: 0 0 37/640*100+vw
+			padding: 22/640*100+vw 40/640*100+vw
+			border-radius: 8/640*100+vw
+			font-size: 30/640*100+vw
+			box-shadow: 1/640*100+vw 0 6/640*100+vw rgba(#000, .46)
+			&:before
+				top: 50%
+				width: 37/640*100+vw
+				margin-top: -19/640*100+vw
+				left: -18/640*100+vw
+				padding: 5/640*100+vw 11.25/640*100+vw 7/640*100+vw
+				font-size: 25/640*100+vw
+		.answerBox
+			p
+				width: auto
+			.btnWrap
+				width: auto
+		&.published
+			padding: 90/640*100+vw 60/640*100+vw 140/640*100+vw 70/640*100+vw
+			.answerOption
+				width: auto
+				margin-bottom: 22/640*100+vw
+				padding: 17/640*100+vw 50/640*100+vw
+				&:before
+					padding: 5/640*100+vw 9.85/640*100+vw 7/640*100+vw
+					transform: scale(1.9)
+			.answerBox
+				p
+					width: auto
+					line-height: 40/640*100+vw
+					padding: 0 20/640*100+vw
+					font-size: 30/640*100+vw
+				.btnWrap
+					width: 510/640*100+vw
+					margin-top: 40/640*100+vw
+					a
+						float: none
+						display: inline-block
+						width: 192/640*100+vw
+						height: 51/640*100+vw
+						line-height: 51/640*100+vw
+						margin: 0 18/640*100+vw
+						font-size: 4.5vw
+						&:hover
+							box-shadow: none
+							&:before, &:after
+								display: none
+

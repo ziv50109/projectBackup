@@ -1,0 +1,411 @@
+.menu
+	.box
+		position: relative
+		vertical-align: top
+		display: inline-block
+		width: 50%
+		height: 270px
+		&.lt
+			padding: 30px 0 0 25px
+			h2:hover
+				color: #952d98
+				.arrow
+					.stroke1
+						stroke: #CB97CC
+						animation: ltColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #952D98
+					.stroke2
+						stroke: #952D98
+						animation: ltColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #CB97CC
+			&:after
+				content: '-----------------------------------------------'
+				position: absolute
+				left: 13px
+				bottom: 0
+				display: block
+				width: 188px
+				height: 10px
+				font-size: 12px
+				letter-spacing: 0
+				color: rgba(#1d3a76, .4)
+				font-family: Arial
+			.icon
+				width: 23px
+				height: 32px
+			.bgIcon
+				top: 122px
+				right: 290px
+				width: 114px
+				height: 114px
+		&.rt
+			padding: 30px 15px 0 0
+			text-align: right
+			h2:hover
+				color: #a2a4a3
+				.arrow
+					.stroke1
+						stroke: #D1D2D2
+						animation: rtColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #a2a4a3
+					.stroke2
+						stroke: #a2a4a3
+						animation: rtColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #D1D2D2
+			p
+				margin-right: 28px
+			&:after
+				content: '-----------------------------------------------'
+				position: absolute
+				right: 18px
+				bottom: 0
+				display: block
+				width: 188px
+				height: 10px
+				font-size: 12px
+				letter-spacing: 0
+				color: rgba(#1d3a76, .4)
+				font-family: Arial
+			.icon
+				width: 24px
+				height: 34px
+			.bgIcon
+				top: 118px
+				right: 28px
+				width: 130px
+				height: 130px
+		&.lb
+			padding: 125px 0 0 25px
+			h2:hover
+				color: #d15b05
+				.arrow
+					.stroke1
+						stroke: #E8AE83
+						animation: lbColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #d15b05
+					.stroke2
+						stroke: #d15b05
+						animation: lbColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #E8AE83
+			.icon
+				top: 0
+				width: 37px
+				height: 24px
+			.bgIcon
+				top: 178px
+				right: 228px
+				width: 120px
+				height: 114px
+		&.rb
+			padding: 125px 28px 0 0
+			text-align: right
+			h2:hover
+				color: #002664
+				.arrow
+					.stroke1
+						stroke: #8194B2
+						animation: rbColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #002664
+					.stroke2
+						stroke: #002664
+						animation: rbColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #8194B2
+			p
+				margin-right: 5px
+			.icon
+				width: 29px
+				height: 33px
+			.bgIcon
+				top: 174px
+				right: 18px
+				width: 122px
+				height: 122px
+	h2
+		margin: 0
+		font-size: 34px
+		font-weight: bold
+		letter-spacing: 1px
+		color: #1a9ce3
+		cursor: pointer
+		transition: all .15s
+		&:hover
+			transition: all .15s
+	svg
+		line-height: 34px
+	p
+		display: inline-block
+		text-align: left
+		line-height: 29px
+		margin: 15px 0 0
+		font-size: 20px
+		font-weight: bold
+		letter-spacing: normal
+		color: #182d60
+.icon
+	position: relative
+	top: 5px
+	margin-right: 10px
+
+
+.arrow
+	width: 24px
+	height: 26px
+.stroke1, .stroke2
+	fill: none
+	stroke-width: 2.5
+	stroke-linecap: round
+.stroke1
+	stroke: #A2D7F4
+	animation: color1 1.3s ease-out infinite
+	&.ieSvgAnimation
+		stroke: #1A9CE3
+.stroke2
+	stroke: #1A9CE3
+	animation: color2 1.3s ease-out infinite
+	&.ieSvgAnimation
+		stroke: #A2D7F4
+@keyframes color1
+	0%
+		stroke: #A2D7F4
+	50%
+		stroke: #1A9CE3
+	100%
+		stroke: #A2D7F4
+@keyframes color2
+	0%
+		stroke: #1A9CE3
+	50%
+		stroke: #8ECEF1
+	100%
+		stroke: #1A9CE3
+@keyframes ltColor1
+		0%
+			stroke: #CB97CC
+		50%
+			stroke: #952D98
+		100%
+			stroke: #CB97CC
+@keyframes ltColor2
+	0%
+		stroke: #952D98
+	50%
+		stroke: #CB97CC
+	100%
+		stroke: #952D98
+@keyframes rtColor1
+	0%
+		stroke: #D1D2D2
+	50%
+		stroke: #a2a4a3
+	100%
+		stroke: #D1D2D2
+@keyframes rtColor2
+	0%
+		stroke: #a2a4a3
+	50%
+		stroke: #D1D2D2
+	100%
+		stroke: #a2a4a3
+@keyframes lbColor1
+	0%
+		stroke: #E8AE83
+	50%
+		stroke: #d15b05
+	100%
+		stroke: #E8AE83
+@keyframes lbColor2
+	0%
+		stroke: #d15b05
+	50%
+		stroke: #E8AE83
+	100%
+		stroke: #d15b05
+@keyframes rbColor1
+	0%
+		stroke: #8194B2
+	50%
+		stroke: #002664
+	100%
+		stroke: #8194B2
+@keyframes rbColor2
+	0%
+		stroke: #002664
+	50%
+		stroke: #8194B2
+	100%
+		stroke: #002664
+
+.bgIcon
+	position: absolute
+	z-index: -1
+
+
+
+
+
+@media screen and(max-width: 640px)
+	.menu
+		.desktop
+			display: none
+		.box
+			height: 270/640*100+vw
+			&.lt
+				top: -95/640*100+vw
+				padding: 0 80/640*100+vw 0 0
+				&:after
+					content: '-----------------'
+					position: absolute
+					left: 225/640*100+vw
+					bottom: 160/640*100+vw
+					width: 188/640*100+vw
+					height: 10/640*100+vw
+					font-size: 12/640*100+vw
+					color: rgba(#519ecc,0.4)
+					transform: rotate(90deg)
+					@media screen and(max-width: 550px)
+						content: '-------------'
+						bottom: 170/640*100+vw
+					@media screen and(max-width: 425px)
+						content: '-----------'
+				.icon
+					width: 22/640*100+vw
+					height: 32/640*100+vw
+				h2
+					color: #952d98
+				.arrow
+					.stroke1
+						stroke: #CB97CC
+						animation: ltColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #952D98
+					.stroke2
+						stroke: #952D98
+						animation: ltColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #CB97CC
+				.bgIcon
+					top: 57/640*100+vw
+					right: 168/640*100+vw
+					width: 99/640*100+vw
+					height: 99/640*100+vw
+			&.rt
+				top: -95/640*100+vw
+				padding: 0
+				text-align: right
+				&:after
+					display: none
+				.icon
+					width: 23/640*100+vw
+					height: 35/640*100+vw
+				h2
+					color: #a2a4a3
+				.arrow
+					.stroke1
+						stroke: #D1D2D2
+						animation: rtColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #a2a4a3
+					.stroke2
+						stroke: #a2a4a3
+						animation: rtColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #D1D2D2
+				.bgIcon
+					top: 58/640*100+vw
+					right: 50/640*100+vw
+					width: 113/640*100+vw
+					height: 113/640*100+vw
+			&.lb
+				bottom: -95/640*100+vw
+				padding: 162/640*100+vw 84/640*100+vw 0 0
+				&:after
+					content: '-----------------'
+					position: absolute
+					left: 225/640*100+vw
+					bottom: -10/640*100+vw
+					display: block
+					letter-spacing: 0
+					width: 188/640*100+vw
+					height: 10/640*100+vw
+					font-size: 12/640*100+vw
+					color: rgba(#519ecc,0.4)
+					transform: rotate(90deg)
+					@media screen and(max-width: 550px)
+						content: '-------------'
+						bottom: -20/640*100+vw
+					@media screen and(max-width: 425px)
+						content: '-----------'
+				.icon
+					top: 0
+					width: 34/640*100+vw
+					height: 23/640*100+vw
+				h2
+					color: #d15b05
+				.arrow
+					.stroke1
+						stroke: #E8AE83
+						animation: lbColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #d15b05
+					.stroke2
+						stroke: #d15b05
+						animation: lbColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #E8AE83
+				.bgIcon
+					top: 85/640*100+vw
+					right: 170/640*100+vw
+					width: 104/640*100+vw
+					height: 99/640*100+vw
+			&.rb
+				bottom: -95/640*100+vw
+				padding: 155/640*100+vw 0 0 25/640*100+vw
+				text-align: right
+				.icon
+					width: 26/640*100+vw
+					height: 30/640*100+vw
+				h2
+					color: #002664
+				.arrow
+					.stroke1
+						stroke: #8194B2
+						animation: rbColor1 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #002664
+					.stroke2
+						stroke: #002664
+						animation: rbColor2 1.3s ease-out infinite
+						&.ieSvgAnimation
+							stroke: #8194B2
+				.bgIcon
+					top: 80/640*100+vw
+					right: 45/640*100+vw
+					width: 100/640*100+vw
+					height: 100/640*100+vw
+		h2
+			font-size: 34/640*100+vw
+			text-align: center
+	.icon
+		top: 0
+		display: block
+		margin: 0 auto 5/640*100+vw
+
+
+	.arrow
+		position: absolute
+		margin-top: 4/640*100+vw
+		width: 24/640*100+vw
+		height: 26/640*100+vw
+
+
+
+
+

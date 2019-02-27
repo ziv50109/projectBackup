@@ -1,0 +1,63 @@
+@import "_goBuyAnimation.sass"
+//立馬投資
+.goBuyWrap
+	position: fixed
+	top: 65px
+	left: 0
+	right: 0
+	margin: auto
+	max-width: 1080px
+	width: 1080px
+	z-index: 3
+	@media screen and(max-width: 1100px)
+		width: auto
+	.goBuy
+		position: absolute
+		top: 20px
+		right: -9px
+		display: inline-block
+		padding: 15px 10px
+		border-radius: 8px
+		background-color: #fa7101
+		cursor: pointer
+		transition: box-shadow .3s
+		//animation: shake 2s infinite
+		z-index: 2
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 51px
+			height: 154px
+			background-image: url(../Images/light.png)
+			background-repeat: no-repeat
+			animation: ligth 3.2s infinite
+		@media screen and(max-width: 1100px)
+			right: 0
+		.run
+			width: 32px
+			height: 32px
+			margin-bottom: 5px
+			overflow: hidden;
+			background-image: url(../Images/run3.png)
+			animation: run .65s infinite
+		span
+			display: block
+			padding-left: 4px
+			font-size: 22px
+			font-weight: bold
+			color: #fff
+		&:hover
+			transition: box-shadow .2s
+			box-shadow: 0 0 7px 0 rgba(#000, .45)
+
+
+
+@media screen and(max-width: 640px)
+	.goBuyWrap
+		display: none
+
+
+
+

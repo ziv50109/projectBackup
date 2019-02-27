@@ -1,0 +1,219 @@
+.section_4
+	.content
+		width: 870px
+		height: 746px
+	.content-default
+		margin-top: 186px
+		h2
+			margin-bottom: 30px
+			text-align: center
+			font-size: 36px
+			font-weight: bold
+			color: #00aae7
+		> p
+			width: 516px
+			line-height: 1.6
+			margin: 0 auto
+			font-size: 16px
+		&.hide
+			display: none
+			&+.content-wrap
+				display: block
+				animation: fadeIn .3s
+	.content-wrap
+		display: none
+	.slider_box-wrap
+		position: relative
+		ul
+			height: 327px
+		.slide_box
+			display: flex
+			width: 100%
+			opacity: 0
+			transition: opacity .3s
+			&.active
+				opacity: 1
+		.left, .right
+			width: 50%
+		.left
+			padding-left: 20px
+		.right
+			margin-top: 129px
+			padding-left: 50px
+			h2
+				margin-bottom: 12px
+				font-size: 25px
+				font-weight: bold
+				color: #00aae7
+			p
+				width: 310px
+				line-height: 1.6
+				font-size: 16px
+				color: #000100
+		.pic
+			width: 426px
+			height: 386px
+			background-image: url(section4-yt-bg.png)
+			cursor: pointer
+		@for $i from 1 through 6
+			.box#{$i}
+				.pic
+					background-position-x: #{-426*($i+-1)}px
+		.prev, .next
+			display: none
+	.item_wrap
+		display: flex
+		justify-content: space-around
+		margin-top: 30px
+		padding: 0 10px 0 20px
+	.item
+		text-align: center
+		cursor: pointer
+		.icon
+			height: 162px
+			background-image: url(section4-icon.png)
+			background-repeat: no-repeat
+		&:hover, &.active
+			.icon
+				background-position-y: -169px
+		p
+			line-height: 1.8
+			font-size: 16px
+			font-weight: bold
+			color: #0e2d6d
+	.item1
+		.icon
+			width: 100px
+	.item2
+		.icon
+			width: 91px
+			background-position-x: -107px
+	.item3
+		.icon
+			width: 91px
+			background-position-x: -205px
+	.item4
+		.icon
+			width: 110px
+			background-position-x: -303px
+	.item5
+		.icon
+			width: 91px
+			background-position-x: -420px
+	.item6
+		.icon
+			width: 161px
+			background-position-x: -518px
+
+	.bottom_info
+		display: flex
+		justify-content: space-around
+		margin-top: 85px
+		> a
+			display: block
+		.info
+			position: relative
+			width: 263px
+			height: 100%
+			padding: 13px 15px
+			background-color: #fff
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: -3px
+				margin: auto
+				width: calc(100% + 6px)
+				height: calc(100% + 6px)
+				border-radius: 5px
+				z-index: -1
+			&:after
+				content: ''
+				position: absolute
+				top: -29px
+				left: -3px
+				width: 27px
+				height: 30px
+		h4, p
+			font-size: 15px
+			font-weight: bold
+		h4
+			line-height: 1.5
+		p
+			line-height: 1.3
+			color: #898989
+		.info1
+			color: #2f467e
+			&:before
+				background-color: #00AAE7
+			&:after
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAeCAMAAADqx5XUAAAAllBMVEUAAAAAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAqucAquf///8AqucgteoIrejz+/7n9/3b8/zL7vq96fmx5fiW3PWG1/RbyPAXsuoPr+j7/v/5/f7S8Puk4faT2/V40vJ30vJvz/FOxO5CwO03vOwtuetZRp1AAAAAF3RSTlMA3sZINP736dGZh0E7Ly2wpHpuY1lQHKk30E4AAACnSURBVCjPddA3AoIAEAVREXPOfxRFMOdw/8sJjRTsTvu6qWQtKl5hQBDaNKgD9Z5pbVhCs2ZZCy5HCPqGAdquoOqYEmDkmFKg45juwNgx7YGpY6cXMLdN0Qfo2qZ19qDRs02bQz7INsXZoNbAtmKQYboCbce0KwaVTE9gYth/0Myx8xsIbVP0zQeVrRhUK1kxKOjbpjh/4JgSYOiYUsCzbJBvuj18k36jWi81edUgHAAAAABJRU5ErkJggg==)
+		.info2
+			color: #e57815
+			&:before
+				background-color: #E57815
+			&:after
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAeCAMAAADqx5XUAAAAmVBMVEUAAADleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBXleBX////leBXpiDHmfBz++/j77N765M/43ML31rf0x5/zv5DxuIPuqGnrk0LngyjngCPlehf//fv99/H99Oz88OX659b2z6v0xpzws3vtoV3sm1Jf6j+QAAAAGHRSTlMAxkg09+nf3ZmHQTsvLdLQsKR6bmNZUBxudZ6hAAAAqUlEQVQoz3XSRxKCABBEUcWcs/Y3AyrmdP/DKUUVLpzp7dv96sJ3s4K3oEo1sKkDQMu0OsyhUrKsC7cEam3DAG0WUHRM2yMMHFMINBxTDAwd0w4YO3Z6AVPbtNwDTdt0mUO5ZZtWhzSQbVon0OvYlgeyTHeg7pgioOGYnsDIsDzQxLHlGwhs0zkLZJquaaDSn/0C1dq2aZ02sC07Sd8xhYBnivBNj9g36QOuFzFrDpC8sAAAAABJRU5ErkJggg==)
+		.info3
+			color: #803a92
+			&:before
+				background-color: #803A92
+			&:after
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAeCAMAAADqx5XUAAAAk1BMVEUAAACAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpKAOpL///+AOpL7+fzLrtKEQJbt4/Do2uvezOPYw97Docu8l8WtgLmOUJ6KSpuHRpiBPJP48/n17/bx6fPk1efSudi3kMGndrOhba6bZKqWXaWSVqEqO2K8AAAAFnRSTlMALsZINOnf3dGZh1RBO/n0sKR6bmMcVUkJwwAAAKlJREFUKM910kcSggAQRFERc479wQRizt7/dEpRlgtmevt2v7ry3bziLWzQCG0KAOib1oYM6jXLWrDaQzMwDNB6AVXHtDnA2DHFQMcxpcDEMW2BmWPRHeiWrcAn0LNNpzcM+rZpucsD2aY8UCuwrQjkmK5A2zElQMcx3YCpZb9AXceiBxDapuML6NmmcwbDWsn+gZqBbbrkDWwrTjJyTDHgmRJ8U5z6Jn0Aw3EtbW6s51YAAAAASUVORK5CYII=)
+	.nextArrow
+		top: 860px
+		margin-top: 30px
+	.back-icon
+		display: none
+
+@keyframes fadeIn
+	0%
+		display: none
+		opacity: 0
+	0.1%
+		display: block
+		opacity: 0
+	100%
+		display: block
+		opacity: 1
+
+
+
+@media screen and (max-width: $pc-s)
+	.section_4
+		.content
+			width: 870px * .8
+			height: 746px * .8
+		.item_wrap
+			margin-top: 0
+		.content-default
+			margin-top: 186px
+			h2
+				font-size: 32px
+		.slider_box-wrap
+			.left
+				padding-left: 20px
+			.right
+				margin-top: 150px
+				padding-left: 40px
+				h2
+					margin-bottom: 12px
+					font-size: 20px
+				p
+					width: 260px
+					font-size: 14px
+			.pic
+				transform-origin: left
+				transform: scale(.72) translateY(16px)
+		.bottom_info
+			margin-top: 80px
+			.info
+				width: 210px
+				padding: 8px 10px
+			h4, p
+				font-size: 14px
+		.nextArrow
+			top: 820px
+			margin-top: 50px

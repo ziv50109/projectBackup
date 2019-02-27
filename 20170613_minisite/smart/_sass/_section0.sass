@@ -1,0 +1,173 @@
+.section.section_0
+	position: relative
+	width: 100%
+	height: 1044px
+	overflow: hidden
+	z-index: 1
+.section_0
+	.kv_wrap
+		position: fixed
+		top: -340px
+		right: 810px
+		z-index: -1
+		.kv-box
+			position: absolute
+			top: 0
+			left: 0
+			width: 1200px
+			height: 1300px
+			background-size: cover
+			z-index: -1
+		@for $i from 1 through 5
+			.kv#{$i}
+				background-image: url(index-#{$i}.png)
+
+
+	.kv_content
+		position: absolute
+		left: -10%
+		right: 0
+		margin: 280px auto 0
+		width: 580px
+		text-align: center
+		h1, h2, .info
+			font-weight: bold
+		h1
+			margin-bottom: 30px
+			font-size: 65px
+			color: #e6782f
+		h2
+			margin-bottom: 10px
+			font-size: 54px
+			color: #00aae7
+		.info
+			line-height: 1.2
+			margin-bottom: 25px
+			text-align: left
+			font-size: 54px
+			color: #898989
+		.sellWell
+			display: inline-block
+			line-height: 42px
+			padding: 0 20px
+			font-size: 24px
+			font-weight: bold
+			color: #fff
+			background-color: #00AAE7
+			cursor: pointer
+
+	.scroll-icon_wrap
+		position: absolute
+		top: 0
+		left: 0
+		margin: auto
+		width: 100vw
+		height: calc(100vh - 17px)
+		max-height: 875px
+		min-height: 730px
+		z-index: -1
+	.scroll-icon
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		width: 40px
+		height: 53px
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjMEUyRDZEIiBkPSJNMzEzLjY3OSwwQzIwMC40MDUsMCwxMDguNDE4LDc2LjYzLDEwOC40MTgsMTcwLjg5OHYxODAuMDIxYzAsNDEuMDUyLDE3Ljc5LDgwLjg4OCw1MC4xNzUsMTExLjkwNGMzMi4wODIsMzAuNzEzLDc2LjE3NCw1MS4wODcsMTI0LjA2OCw1Ny4wMTdoMC40NTZ2LTIyLjA0NmgtMC40NTZjLTg4LjMzOC0xMi4xNjQtMTUyLjM0OS03NC4wNDYtMTUyLjM0OS0xNDcuMDI3VjE3MC44OThjMC04Mi4yNTYsODIuMjU2LTE0OS4xNTYsMTgzLjIxNC0xNDkuMTU2YzEwMC45NTcsMCwxODMuMjE0LDY2LjksMTgzLjIxNCwxNDkuMTU2djE4MC4wMjFjMCw3OC45MTEtNzUuNTY2LDE0NC4xMzgtMTcyLjExNSwxNDguODUyVjI4NS4yMzVoLTIyLjA0NnYzMTEuNjkxbC0zNi4zMzktMzUuODgzTDI1MC41OCw1NzYuNGw2My4wOTksNjIuMTg3bDYzLjA5OC02Mi4xODdsLTE1LjY2LTE1LjM1NmwtMzYuMzM5LDM1Ljg4M3YtNzUuMTA5YzUyLjMwNC0yLjI4MSwxMDEuMTA5LTIxLjEzNSwxMzcuNDQ4LTUyLjc2YzM2LjY0My0zMS45Myw1Ni43MTMtNzMuODk0LDU2LjcxMy0xMTcuODM0VjE3MC44OThDNTE4LjkzOCw3Ni42Myw0MjYuOCwwLDMxMy42NzksMHogTTM3Ny45OTMsMTY1LjcyOWMwLTM1LjEyMi0yOC44ODktNjMuNTU1LTY0LjMxNC02My41NTVjLTM1LjQyNywwLTY0LjMxNSwyOC41ODQtNjQuMzE1LDYzLjU1NXMyOC44ODksNjMuNTU1LDY0LjMxNSw2My41NTVDMzQ5LjEwNCwyMjkuMTMxLDM3Ny45OTMsMjAwLjY5OSwzNzcuOTkzLDE2NS43Mjl6IE0yNzEuMjU4LDE2NS43MjljMC0yMy4xMTEsMTkuMDA1LTQxLjgxMyw0Mi4yNjktNDEuODEzYzIzLjI2MywwLDQyLjI2OSwxOC43MDIsNDIuMjY5LDQxLjgxM2MwLDIyLjk1OS0xOS4wMDYsNDEuODEzLTQyLjI2OSw0MS44MTNDMjkwLjI2MywyMDcuMzg5LDI3MS4yNTgsMTg4LjY4OCwyNzEuMjU4LDE2NS43Mjl6Ii8+PC9zdmc+)
+		background-repeat: no-repeat
+		cursor: pointer
+		animation: breathe 6s infinite
+
+
+
+
+
+//動畫
+.section_0
+	.kv-box
+		transform: translateX(0) scale(1)
+		opacity: 1
+		transition-property: transform, opacity
+		transition-duration: $kv-box--duration
+	@for $i from 1 through 5
+		.kv#{$i}
+			transition-delay: #{.25*$i+.1}s
+	.scroll-icon
+		opacity: 1
+		transition: opacity $fixed_box--duration
+	.kv_content
+		opacity: 1
+		transform: scale(1)
+		transition-property: transform, opacity
+		transition-delay: $kv_content--delay
+		transition-duration: $kv_content--duration
+
+.section_0
+	&.animate
+		.kv-box
+			opacity: 0
+			transform: translateX(30%) scale(.5)
+		.scroll-icon
+			opacity: 0
+		.kv_content
+			opacity: 0
+			transform: scale(2)
+
+
+
+@keyframes breathe
+	0%
+		transform: translateY(0)
+	15%
+		transform: translateY(14%)
+	43%
+		transform: translateY(-5%)
+	49%
+		transform: translateY(-5%)
+	65%
+		transform: translateY(12%)
+	95%
+		transform: translateY(0)
+
+
+
+
+@media screen and (max-width: $pc-l)
+	.section_0
+		.kv_wrap
+			top: -170px
+			right: 690px
+			.kv-box
+				width: 960px
+				height: 1040px
+@media screen and (max-width: $pc-m)
+	.section_0
+		.kv_wrap
+			top: -80px
+			right: 580px
+			.kv-box
+				width: 840px
+				height: 910px
+@media screen and (max-width: $pc-s)
+	.section_0
+		.kv_wrap
+			right: 550px
+		.kv_content
+			left: -15%
+			width: 446px
+			h1
+				margin-bottom: 30px
+				font-size: 52px
+			h2
+				margin-bottom: 10px
+				font-size: 43px
+			.info
+				margin-bottom: 25px
+				font-size: 43px
+			.sellWell
+				line-height: 40px
+				padding: 0 20px
+				font-size: 20px
+
+
